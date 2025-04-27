@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b5d4f4-4ae3-41f4-8b9d-64989d917e33" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/agent/hybridmcp/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agent/hybridmcp/mcpClient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agent/hybridmcp/mcpServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agent/hybridmcp/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +114,7 @@
       <workItem from="1743991616422" duration="33000" />
       <workItem from="1744098041980" duration="37988000" />
       <workItem from="1744098041980" duration="13959000" />
-      <workItem from="1744617946167" duration="9974000" />
+      <workItem from="1744617946167" duration="12288000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <option name="closed" value="true" />
