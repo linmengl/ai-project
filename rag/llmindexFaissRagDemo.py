@@ -1,12 +1,17 @@
-from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
+from llama_index.core import SimpleDirectoryReader, VectorStoreIndex,Settings
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+import os
 
+os.environ["TOKENIZERS_PARALLELISM"] = "false"  # 显式禁用并行
+
+# ===== 禁用OpenAI默认调用 =====
+Settings.llm = None
 
 documents = SimpleDirectoryReader("data/").load_data()
 
 # embedding = HuggingFaceEmbedding(model_name = "moka-ai/m3e-base")
-# embedding = HuggingFaceEmbedding(model_name = "shibing624/text2vec-base-multilingual")
-embedding = HuggingFaceEmbedding(model_name = "./text2vec")
+embedding = HuggingFaceEmbedding(model_name = "shibing624/text2vec-base-multilingual")
+# embedding = HuggingFaceEmbedding(model_name = "./text2vec")
 
 index = VectorStoreIndex.from_documents(documents, embed_model = embedding)
 
