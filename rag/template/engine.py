@@ -4,6 +4,7 @@ from llama_index.llms.ollama import Ollama
 import config
 from llama_index.core import StorageContext, load_index_from_storage
 import os
+from llama_index.core.query_engine import BaseQueryEngine
 
 # 禁用 tokenizer 并行加速避免告警
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
