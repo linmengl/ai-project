@@ -4,10 +4,11 @@ import os
 from llama_index.llms.ollama import Ollama
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"  # 显式禁用并行
+
 Settings.llm = Ollama(
-    # model="llama3:8b",
-    model="deepseek-r1:7b",
-    # system_prompt="你是一个中文助手，请始终使用简体中文回答问题。",
+    model="llama3:8b",
+    # model="deepseek-r1:7b",
+    system_prompt="你是一个中文助手，请始终使用简体中文回答问题。",
     temperature=0.7
 )
 
