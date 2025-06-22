@@ -1,10 +1,9 @@
-from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
+from llama_index.core import SimpleDirectoryReader, VectorStoreIndex, Settings
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 import os
+from llama_index.llms.ollama import Ollama
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"  # 显式禁用并行
-
-from llama_index.llms.ollama import Ollama
 Settings.llm = Ollama(
     # model="llama3:8b",
     model="deepseek-r1:7b",
