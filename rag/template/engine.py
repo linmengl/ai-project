@@ -17,24 +17,24 @@ def init_llm():
         temperature=0.7
     )
 
-def init_embedding():
-    embedding = HuggingFaceEmbedding(model_name=config.EMBEDDING_MODEL)
-    Settings.embed_model = embedding
-
-
-# 加载现有索引（优先使用已有的）
-def load_or_build_index():
-    if os.path.exists(os.path.join(config.INDEX_DIR, "index_store.json")):
-        storage_context = StorageContext.from_defaults(persist_dir=config.INDEX_DIR)
-        return load_index_from_storage(storage_context)
-    return build_index()
+# def init_embedding():
+#     embedding = HuggingFaceEmbedding(model_name=config.EMBEDDING_MODEL)
+#     Settings.embed_model = embedding
+#
+#
+# # 加载现有索引（优先使用已有的）
+# def load_or_build_index():
+#     if os.path.exists(os.path.join(config.INDEX_DIR, "index_store.json")):
+#         storage_context = StorageContext.from_defaults(persist_dir=config.INDEX_DIR)
+#         return load_index_from_storage(storage_context)
+#     return build_index()
 
 # 上传接口
-def do_upload_file(file):
+def do_upload_file(file, tenant_id):
     print(f"type of file: {type(file)}, value: {file}")
     filename = os.path.basename(file)
     print("上传文件：" + filename)
-    file_write_path = os.path.join(config.UPLOAD_DIR, filename)
+    file_write_path = os.path.join(config.UPLOAD_DIR, tenant_id, filename)
     print("文件写入路径："+file_write_path)
     # 以二进制只读模式打开上传文件（路径由 gr.File(..., type="filepath") 返回
     with open(file, "rb") as src, open(file_write_path, "wb") as dst:
