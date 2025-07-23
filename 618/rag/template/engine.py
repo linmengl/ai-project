@@ -1,7 +1,5 @@
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.ollama import Ollama
-import config
 from llama_index.core import StorageContext, load_index_from_storage
 import os
 from llama_index.core.query_engine import BaseQueryEngine
@@ -34,7 +32,10 @@ def do_upload_file(file, tenant_id):
     print(f"type of file: {type(file)}, value: {file}")
     filename = os.path.basename(file)
     print("上传文件：" + filename)
+    file_write_dir = os.path.join(config.UPLOAD_DIR, tenant_id)
+    os.makedirs(file_write_dir, exist_ok=True)
     file_write_path = os.path.join(config.UPLOAD_DIR, tenant_id, filename)
+
     print("文件写入路径："+file_write_path)
     # 以二进制只读模式打开上传文件（路径由 gr.File(..., type="filepath") 返回
     with open(file, "rb") as src, open(file_write_path, "wb") as dst:

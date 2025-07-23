@@ -27,7 +27,7 @@ embedding_model = HuggingFaceEmbedding(model_name="shibing624/text2vec-base-mult
 index = VectorStoreIndex.from_documents(documents, embed_model=embedding_model)
 
 # 持久化
-index.storage_context.persist(persist_dir="./storage")
+index.storage_context.persist(persist_dir="storage")
 
 query_engine = index.as_query_engine()
 
