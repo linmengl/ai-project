@@ -5,6 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99b5d4f4-4ae3-41f4-8b9d-64989d917e33" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/rag/data/卓有成效的管理者.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/kbs/docs/卓有成效的管理者.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/template/docs/卓有成效的管理者.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/1_Pooling/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/logs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/model.safetensors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/modules.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/onnx/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/onnx/model.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/onnx/model_O4.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/onnx/model_qint8_avx512_vnni.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/onnx/special_tokens_map.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/onnx/tokenizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/onnx/tokenizer_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/onnx/vocab.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/openvino/openvino_model.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/openvino/openvino_model.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/pytorch_model.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/sentence_bert_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/special_tokens_map.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/tokenizer_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/text2vec/vocab.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,29 +59,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.ai-project.executor": "Run",
-    "Python.client.executor": "Debug",
-    "Python.lstm2.executor": "Run",
-    "Python.mcpServer.executor": "Run",
-    "Python.newsClassify.executor": "Debug",
-    "Python.newsClassify2.executor": "Debug",
-    "Python.queryweather.executor": "Run",
-    "Python.torchtext1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/menglin/ai-model/ai-project/agent/hybridmcp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.ai-project.executor&quot;: &quot;Run&quot;,
+    &quot;Python.client.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.lstm2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mcpServer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.newsClassify.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.newsClassify2.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.queryweather.executor&quot;: &quot;Run&quot;,
+    &quot;Python.torchtext1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/menglin/ai-model/ai-project/agent/hybridmcp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/agent/hybridmcp" />
@@ -115,6 +140,8 @@
       <workItem from="1744098041980" duration="37988000" />
       <workItem from="1744098041980" duration="13959000" />
       <workItem from="1744617946167" duration="12288000" />
+      <workItem from="1750316107574" duration="19000" />
+      <workItem from="1752225365285" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <option name="closed" value="true" />
