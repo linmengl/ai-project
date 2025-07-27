@@ -5,6 +5,8 @@ import config
 from llama_index.core import StorageContext, load_index_from_storage
 import os
 from llama_index.core.query_engine import BaseQueryEngine
+from typing import Dict
+import config
 
 # 禁用 tokenizer 并行加速避免告警
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -17,17 +19,17 @@ def init_llm():
         temperature=0.7
     )
 
-def init_embedding():
-    embedding = HuggingFaceEmbedding(model_name=config.EMBEDDING_MODEL)
-    Settings.embed_model = embedding
-
-
-# 加载现有索引（优先使用已有的）
-def load_or_build_index():
-    if os.path.exists(os.path.join(config.INDEX_DIR, "index_store.json")):
-        storage_context = StorageContext.from_defaults(persist_dir=config.INDEX_DIR)
-        return load_index_from_storage(storage_context)
-    return build_index()
+# def init_embedding():
+#     embedding = HuggingFaceEmbedding(model_name=config.EMBEDDING_MODEL)
+#     Settings.embed_model = embedding
+#
+#
+# # 加载现有索引（优先使用已有的）
+# def load_or_build_index():
+#     if os.path.exists(os.path.join(config.INDEX_DIR, "index_store.json")):
+#         storage_context = StorageContext.from_defaults(persist_dir=config.INDEX_DIR)
+#         return load_index_from_storage(storage_context)
+#     return build_index()
 
 # 上传接口
 def do_upload_file(file):
@@ -39,9 +41,6 @@ def do_upload_file(file):
     # 以二进制只读模式打开上传文件（路径由 gr.File(..., type="filepath") 返回
     with open(file, "rb") as src, open(file_write_path, "wb") as dst:
         dst.write(src.read())
-
-from typing import Dict
-import config
 
 _index_cache: Dict[str, BaseQueryEngine] = {}
 
